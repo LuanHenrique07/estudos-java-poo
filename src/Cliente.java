@@ -12,6 +12,19 @@ public class Cliente {
         }
     }
 
+    public Cliente (String nome, String plataforma, double investimentoMensal, boolean campanhaAtiva){
+        this.nome = nome;
+        this.plataforma = plataforma;
+        if (investimentoMensal > 0){
+            this.investimentoMensal = investimentoMensal;
+        }else {
+            System.out.println("Investimento Inválido!");
+        }
+        this.campanhaAtiva = campanhaAtiva;
+
+
+    }
+
     public double getInvestimentoMensal(){
         return investimentoMensal;
     }
