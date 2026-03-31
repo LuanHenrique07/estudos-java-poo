@@ -1,6 +1,6 @@
 package heranca;
 
-public class Cliente extends Pessoa{
+public class Cliente extends Pessoa implements Relatorio  {
     private String plataforma;
     private double investimentoMensal;
 
@@ -18,5 +18,19 @@ public class Cliente extends Pessoa{
 
     public double getInvestimentoMensal(){
         return investimentoMensal;
+    }
+
+    public double getInvestimentoAnual(){
+        return investimentoMensal * 12;
+    }
+
+    @Override
+    public void exibirdados() {
+        System.out.println("Cliente: " + getNome() + "|Plataforma: " + getPlataforma());
+    }
+
+    @Override
+    public void emitirRelatorio() {
+        System.out.println("Cliente: " + getNome() + "|Plataforma: " + getPlataforma() + "|Investimento anual de: " + getInvestimentoAnual());
     }
 }

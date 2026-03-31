@@ -2,6 +2,7 @@ package heranca;
 
 public class Main {
     public static void main(String[] args){
+
         Cliente cliente1 = new Cliente();
 
         cliente1.setNome("Luan Almeida");
@@ -19,5 +20,18 @@ public class Main {
         func1.setSalario(20000);
 
         System.out.println("Nosso funcionário "+func1.getNome()+", está faturando seus R$" + func1.getSalario()+ " aos "+func1.getIdade()+" anos, trabalando como "+func1.getCargo()+".");
+
+        //exibir dados da classe PAI
+
+        cliente1.exibirdados();
+        func1.exibirdados();
+
+        //foreach
+
+        Relatorio[] relatorios = {cliente1, func1};
+
+        for(Relatorio r : relatorios){
+            r.emitirRelatorio();
+        }
     }
 }

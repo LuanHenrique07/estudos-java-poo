@@ -19,4 +19,8 @@ public class Pessoa {
     public int getIdade() {
         return idade;
     }
+
+    public void exibirdados(){
+        System.out.println(nome + " tem " + idade);
+    }
 }
